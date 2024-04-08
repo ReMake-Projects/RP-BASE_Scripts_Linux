@@ -45,10 +45,10 @@ if [ "$chkgit" = "" ]; then
         zypper install git -y
     fi
     
-    check=$(grep -i "Ubuntu" /etc/*-release)
-    if [[ -n "$check" ] && [ "$os_install" = "" ]] || [[ -n "$check" ] && [ "$os_name" = "Debian" ]]; then
-        apt-get install git -y
-    fi
+   check=$(cat /etc/*-release | grep -i 'Ubuntu')
+    if [ -n "$check" -a "$os_install" = "" ] || [ -n "$check" -a "$os_name" = "Debian" ]; then
+		apt-get install git -y
+	fi
 fi
 
 if [ ! -d ".git" ]; then
