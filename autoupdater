@@ -52,12 +52,10 @@ if [ "$chkgit" = "" ]; then
 fi
 
 if [ ! -d ".git" ]; then
-	git clone https://github.com/ReMake-Projects/TekBASE_Scripts_Linux
-	cd TekBASE_Scripts_Linux
-	mv * ../
-	mv .git ../
-	cd ..
-	rm -rf TekBASE_Scripts_Linux
+	cd /home
+	git clone https://github.com/ReMake-Projects/TekBASE_Scripts_Linux skripte
+	cd skripte
+	chmod +x *
 	newversion=2
 	version=1
 else
