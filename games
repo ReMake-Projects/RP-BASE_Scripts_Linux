@@ -129,6 +129,8 @@ if [ "$VAR_A" = "stop" ]; then
     if [ ! -n "$check" ]; then
 		echo "`date` - Game /home/$VAR_B/server/$VAR_D was stopped" >> $LOGP/logs/$LOGF.txt
 		echo "ID1"
+		echo "Server gestoppt" > /home/$VAR_B/server/$VAR_D/screenlog.0
+
     else
 		echo "`date` - Game /home/$VAR_B/server/$VAR_D cant be stopped" >> $LOGP/logs/$LOGF.txt
 		echo "ID2"
