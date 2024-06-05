@@ -158,7 +158,8 @@ case "$VAR_A" in
 	    fi
 	done
     fi
-
+    
+    killall -u $VAR_B
     userdel $VAR_B
     cd /home
     rm -r $VAR_B
