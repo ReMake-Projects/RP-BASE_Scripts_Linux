@@ -1,10 +1,10 @@
 #! /bin/bash
 
-# TekLabs TekBase
-# Copyright 2005-2018 TekLab
-# Christian Frankenstein
-# Website: teklab.de
-#          teklab.net
+######################
+#       RP-BASE      #
+# by ReMake-Projects #
+#  Based on TekBASE  #
+######################
 
 LOGF=`date +"%Y_%m"`
 LOGP=`pwd`
@@ -14,7 +14,7 @@ if [ ! -d $LOGP/logs ]; then
 fi
 
 if [ ! -f "$LOGP/logs/$LOGF.txt" ]; then
-    echo "***TekBASE Script Log***" >> $LOGP/logs/$LOGF.txt
+    echo "***RP-BASE Script Log***" >> $LOGP/logs/$LOGF.txt
     chmod 0666 $LOGP/logs/$LOGF.txt
 fi
 
@@ -53,9 +53,8 @@ fi
 
 if [ ! -d ".git" ]; then
 	cd /home
-	git clone https://github.com/ReMake-Projects/TekBASE_Scripts_Linux skripte
+	git clone https://github.com/ReMake-Projects/RP-BASE_Scripts_Linux skripte
 	cd skripte
-	chmod +x *
 	newversion=2
 	version=1
 else
